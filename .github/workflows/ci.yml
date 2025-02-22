@@ -23,6 +23,10 @@ jobs:
         run: npm install
         working-directory: ./node-app  # Set working directory to node-app
 
+      - name: Fix Jest Execution Permissions
+        run: chmod +x node_modules/.bin/jest
+        working-directory: ./node-app  # Fix Jest permission issues        
+
       - name: Verify Jest Installation
         run: npx jest --version
         working-directory: ./node-app  # Ensures Jest is installed
