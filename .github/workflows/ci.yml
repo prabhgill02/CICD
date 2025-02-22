@@ -32,7 +32,7 @@ jobs:
         working-directory: ./node-app  # Ensures Jest is installed
 
       - name: Run Tests
-        run: npx jest
+        run: npm test
         working-directory: ./node-app        
 
       - name: Build Docker Image

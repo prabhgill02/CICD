@@ -1,6 +1,7 @@
 const request = require('supertest');
 const app = require('../src/index');
 
+
 describe('API Tests', () => {
     test('GET /ping should return pong', async () => {
         const res = await request(app).get('/ping');
