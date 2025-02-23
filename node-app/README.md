@@ -27,23 +27,23 @@ The server should now be running on http://localhost:3000
 Test API Endpoints using Postman or cURL
 You can manually test the endpoints using Postman or cURL.
 
-• Ping Endpoint (GET /ping)
-curl -X GET http://localhost:3000/ping
+    • Ping Endpoint (GET /ping)
+    curl -X GET http://localhost:3000/ping
 
-Expected Response:
-{ "message": "pong" }
+    Expected Response:
+    { "message": "pong" }
 
-• Addition Endpoint (POST /add)
-curl -X POST http://localhost:3000/add -H "Content-Type: application/json" -d '{"a": 5, "b": 10}'
+    • Addition Endpoint (POST /add)
+    curl -X POST http://localhost:3000/add -H "Content-Type: application/json" -d '{"a": 5, "b": 10}'
 
-Expected Response:
-{ "result": 15 }
+    Expected Response:
+    { "result": 15 }
 
-• Invalid Input (POST /add with missing numbers)
-curl -X POST http://localhost:3000/add -H "Content-Type: application/json" -d '{"a": 5}'
+    • Invalid Input (POST /add with missing numbers)
+    curl -X POST http://localhost:3000/add -H "Content-Type: application/json" -d '{"a": 5}'
 
-Expected Response:
-{ "error": "Invalid input" }
+    Expected Response:
+    { "error": "Invalid input" }
 
 # Test the CI Pipeline
 
@@ -51,17 +51,17 @@ Steps to Trigger the CI/CD Workflow
 
 The GitHub Actions pipeline runs automatically when you:
 
-• Push changes to the main branch
-• Create a pull request to main
+    • Push changes to the main branch
+    • Create a pull request to main
 
 # To run the pipeline manually:
 
 1. Make a small code change
 2. Commit and push:
 
-git add .
-git commit -m "Trigger CI Pipeline"
-git push origin main
+   git add .
+   git commit -m "Trigger CI Pipeline"
+   git push origin main
 
 # Go to GitHub → Actions to view the pipeline status
 
