@@ -3,7 +3,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/ping', (req, res) => {
-    res.json({ message: 'mong' });
+    res.json({ message: 'pong' });
 });
 
 app.post('/add', (req, res) => {
